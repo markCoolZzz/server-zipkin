@@ -21,7 +21,7 @@ import java.util.Date;
 public class DependencyOperate implements Job {
 
     private  final Logger logger = LoggerFactory.getLogger(this.getClass());
-    //时间间隔，单位S
+    //时间间隔，单位s
     private static int intervalTime = 120;
 
     @Override
@@ -33,12 +33,7 @@ public class DependencyOperate implements Job {
         } catch (Exception e) {
             logger.error("ZipkinDependenciesJob main exception ... " + e.getMessage());
         }*/
-        try {
-            ZipkinDependenciesJob.main(new String[]{});
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        logger.info("dependency success ... ");
+        logger.info("dependency end ... ");
     }
 
     public void startTimer()  {
